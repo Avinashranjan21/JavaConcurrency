@@ -12,7 +12,9 @@ public class Main {
             }
         };
         Thread thread = new Thread(runnable);
-        thread.start();
+        thread.setName("Thread 1");
+        thread.start(); // to start this thread on the thread we had created.
+//        thread.run(); // this will run the runnable on main thread.
 
     }
 
