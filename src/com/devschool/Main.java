@@ -4,12 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-            String name = Thread.currentThread().getName();
-                System.out.println("I am running in thread "+name);
-            }
+        Runnable runnable = () -> {
+        String name = Thread.currentThread().getName();
+            System.out.println("I am running in thread "+name);
         };
         Thread thread = new Thread(runnable);
         thread.setName("Thread 1");
